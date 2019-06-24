@@ -21,23 +21,33 @@ public class Convert : System.Web.Services.WebService
         //InitializeComponent(); 
     }
 
+    Random rnd = new Random();
+
+
     [WebMethod]
-    public string HelloWorld()
+    public string YaziYaz()
     {
-        return "Hello Worldd";
+        return "Herhangi bir metin";
     } 
 
     [WebMethod]
-    public double FahrenheitToCensius(double Fahrenheit)
+    public double FahrenheitToCelsius(double Fahrenheit)
     {
         return ((Fahrenheit - 32) * 5) / 9;
     }
 
     [WebMethod]
-    public double CensiusToFahrenheit(double Censius)
+    public double CelsiusToFahrenheit(double Celsius)
     {
-        return ((Censius * 9) / 5) + 32;
+        return ((Celsius * 9) / 5) + 32;
     }
 
+
+    [WebMethod]
+    public int SayiUret()
+    {
+        int sayi = rnd.Next(1000, 5000);
+        return sayi;
+    }
 
 }
